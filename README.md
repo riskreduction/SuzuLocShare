@@ -22,12 +22,10 @@ https://www2.ffpri.go.jp/soilmap/tile/cs_noto/{z}/{x}/{y}.png
 WMTSタイルを読み込む方法については、それぞれのGISの解説を参照してください。プロジェクトの投影法がWebメルカトル (EPSG: 3857) になっていないと、表示されない可能性があるので、表示されない場合はプロジェクトの空間参照を確認してください。
 
 ## 謝辞
-<<<<<<< HEAD
 能登地域のCS立体図は、石川県森林管理課から提供を受けた航空レーザー測量のデータを元に森林総合研究所が[FME](https://fme.safe.com/solutions/data-types/gis-location-intelligence/)を利用して作成したものです。データを提供していただいた石川県森林管理課に感謝申し上げます。データの変換に際しては、Pacific Spatial Solutions株式会社社の飯島氏に大変お世話になりました。
 
-=======
 能登地域のCS立体図は、石川県森林管理課より提供を受けた、航空レーザー測量のデータを元に作成したものです。データを提供していただいた石川県森林管理課に感謝申し上げます。
->>>>>>> origin/master
+
 CS立体図は[ジオフォレスト社](https://gf17v.com/)の戸田堅一郎氏（元長野県）が発案した地形の可視化技術です。本サイトの作成においても多くのご助言をいただきました。ここに記して感謝します。
 作成においてはgithubに公開された[Leaflet Copy Coordinates Control](https://github.com/zimmicz/Leaflet-Coordinates-Control)を改変して使用しています。作者に感謝いたします。
 
