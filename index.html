@@ -61,7 +61,11 @@
     var lyrGSI_WajimaE240102;
     var lyrGSI_WajimaM240105;
     var lyrGSI_WajimaM240111;
+    var lyrGSI_WajimaW240111;
     var lyrGSI_Suzu240102;
+    var lyrGSI_Anamizu240105;
+    var lyrGSI_Nanao240105;
+    var lyrGSI_Nanao240117;
     var lyrGSI60th;
     var geol50kLayer;
     // var detailLayer;
@@ -138,7 +142,15 @@
           attribution:
             "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>",
         }        
-      );        
+      );
+      lyrGSI_WajimaW240111 = L.tileLayer(
+        "https://cyberjapandata.gsi.go.jp/xyz/20240102noto_wazimanishi_0111do/{z}/{x}/{y}.png",
+        {
+          attribution:
+            "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>",
+        }        
+      );   
+
       lyrGSI_Suzu240102 = L.tileLayer(
         "https://cyberjapandata.gsi.go.jp/xyz/20240102noto_suzu_0102do/{z}/{x}/{y}.png",
         {
@@ -159,9 +171,18 @@
           attribution:
             "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>",
         }
-      );     
+      );
+
       lyrGSI_Nanao240105 = L.tileLayer(
         "https://cyberjapandata.gsi.go.jp/xyz/20240102_noto_nanao_0105do/{z}/{x}/{y}.png",
+        {
+          attribution:
+            "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>",
+        }
+      );
+
+      lyrGSI_Nanao240117 = L.tileLayer(
+        "https://cyberjapandata.gsi.go.jp/xyz/20240102noto_nanao_0117do/{z}/{x}/{y}.png",
         {
           attribution:
             "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>",
