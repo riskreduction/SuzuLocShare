@@ -220,8 +220,8 @@
       //   }
       // ).addTo(mymap);
 
-      //能登半島のCS立体図（森林総研）を指定
-      lyrCSMap = L.tileLayer(
+      //発災前CS立体図（森林総研）を指定
+      lyrbfCSMap = L.tileLayer(
         'https://www2.ffpri.go.jp/soilmap/tile/cs_noto/{z}/{x}/{y}.png',
         {
           attribution:
@@ -231,9 +231,21 @@
         }
       ).addTo(mymap);
 
+      //発災後CS立体図（林野庁）
+      lyrafCSMap = L.tileLayer(
+        'https://rinya.geospatial.jp/tile/csmaptile_noto/{z}/{x}/{y}.png',
+        {
+          attribution:
+            "Forestry Agency",
+          minZoom: 8,
+          maxZoom: 17,
+        }
+      ).addTo(mymap);
+
       objBaseMaps = {
         //地理院地図: lyrGSI,
-        災害前CS立体図: lyrCSMap,
+        災害前CS立体図: lyrbfCSMap,
+        災害後CS立体図: lyrafCSMap
       };
 
       objOverlays = {
