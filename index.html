@@ -56,8 +56,12 @@
     var mymap;
     // var lyrOSM;
     var lyrGSI;
-    var lyrCSMap;
+    var lyrafCSMap;
+    var lyrbfCSMap;
     var lyrGoogleHybrid;
+    var lyr20240923rain_wajimatobu_0924do_sokuho;
+    var lyr20240923rain_wajimaseibu_0924do_sokuho;
+    var lyr20240923rain_wajima_0923do_sokuho;
     var lyrGSI_WajimaE240102;
     var lyrGSI_WajimaM240105;
     var lyrGSI_WajimaM240111;
@@ -113,6 +117,30 @@
             "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>",
         }
       );
+
+      // 2024年9月能登半島豪雨
+      lyr20240923rain_wajimatobu_0924do_sokuho = L.tileLayer(
+        "https://cyberjapandata.gsi.go.jp/xyz/20240923rain_wajimatobu_0924do_sokuho/{z}/{x}/{y}.png",
+        {
+          attribution:
+            "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>",
+        }
+      );
+
+    var lyr20240923rain_wajimaseibu_0924do_sokuho = L.tileLayer(
+        "https://cyberjapandata.gsi.go.jp/xyz/20240923rain_wajimaseibu_0924do_sokuho/{z}/{x}/{y}.png",
+        {
+          attribution:
+            "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>",
+        }
+      );
+    var lyr20240923rain_wajima_0923do_sokuho = L.tileLayer(
+        "https://cyberjapandata.gsi.go.jp/xyz/20240923rain_wajima_0923do_sokuho/{z}/{x}/{y}.png",
+        {
+          attribution:
+            "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>",
+        }
+      );      
 
       //2024年1月能登半島地震
       lyrGSI_WajimaE240102 = L.tileLayer(
@@ -251,18 +279,21 @@
       objOverlays = {
         地理院地図: lyrGSI,
         Google高解像度: lyrGoogleHybrid,
-        地理院写真輪島東地区１月２日: lyrGSI_WajimaE240102,
-        地理院写真輪島中地区１月２日: lyrGSI_WajimaM240102,
-        地理院写真輪島中地区１月５日: lyrGSI_WajimaM240105,
-        地理院写真輪島中地区１月11日: lyrGSI_WajimaM240111,
-        地理院写真輪島西地区１月11日: lyrGSI_WajimaW240111,
-        地理院写真珠洲地区１月２日: lyrGSI_Suzu240102,
-        地理院写真珠洲地区１月５日: lyrGSI_Suzu240105,
-        地理院写真穴水地区１月５日: lyrGSI_Anamizu240105,
-        地理院写真七尾地区１月５日: lyrGSI_Nanao240105,
-        国土地理院崩壊地１月２日珠洲輪島東: jsonHoukai,
-        国土地理院崩壊地１月６日珠洲輪島中央: jsonHoukai_wjc,        
-        国土地理院崩壊地１月12日輪島西: jsonHoukai_wjw,
+        地理院写真2024年9月豪雨輪島東部: lyr20240923rain_wajimatobu_0924do_sokuho,
+        地理院写真2024年9月豪雨輪島西部: lyr20240923rain_wajimaseibu_0924do_sokuho,
+        地理院写真2024年9月豪雨輪島: lyr20240923rain_wajima_0923do_sokuho,
+        地理院写真輪島東地区1月2日: lyrGSI_WajimaE240102,
+        地理院写真輪島中地区1月2日: lyrGSI_WajimaM240102,
+        地理院写真輪島中地区1月5日: lyrGSI_WajimaM240105,
+        地理院写真輪島中地区1月11日: lyrGSI_WajimaM240111,
+        地理院写真輪島西地区1月11日: lyrGSI_WajimaW240111,
+        地理院写真珠洲地区1月2日: lyrGSI_Suzu240102,
+        地理院写真珠洲地区1月5日: lyrGSI_Suzu240105,
+        地理院写真穴水地区1月5日: lyrGSI_Anamizu240105,
+        地理院写真七尾地区1月5日: lyrGSI_Nanao240105,
+        国土地理院崩壊地1月2日珠洲輪島東: jsonHoukai,
+        国土地理院崩壊地1月6日珠洲輪島中央: jsonHoukai_wjc,        
+        国土地理院崩壊地1月12日輪島西: jsonHoukai_wjw,
         国土地理院60年代写真: lyrGSI60th,
         能登飯田: geol50kLayer,
         地すべり地形: landslideLayer,
